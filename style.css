@@ -1,0 +1,19 @@
+body
+{
+    background-color: rgb(159, 159, 250);
+}
+
+img
+{
+    height: 100px;
+    width: 100px;
+}
+h5, h4
+{
+    font-size: 20px;
+}
+h1
+{
+    color: red;
+    font-family: monospace;
+}

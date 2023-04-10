@@ -1,0 +1,278 @@
+<html>
+<head>
+  <title>App de Identificação de Imagem em Tempo Real</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <span>
+        <p></p>
+    </span>
+    <span>
+        <p></p>
+    </span>
+    <span>
+        <p></p>
+    </span>
+
+    <div class="copyRightFooter">
+        Desenvolvido por: João Vitor
+        </div>
+
+        <span>
+            <p></p>
+        </span>
+        <ol>
+            <div class="resultados1 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="grampeador.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado1" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado1"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados2 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="garfo.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado2" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado2"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados3 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="grafite.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado3" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado3"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados4 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="escova.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado4" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado4"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados5 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="pente.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado5" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado5"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados6 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="caneta.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado6" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado6"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados7 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="colher.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado7" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado7"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados8 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="copo de plástico.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado8" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado8"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados9 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="tesoura.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado9" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado9"></h4>
+                </div>
+            </div>
+            <br>
+
+            <div class="resultados10 col-lg-6 col-md-6 col-sm-6 xs-12">
+                <li class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <b>Imagem</b>
+                    <img src="fone de ouvido.jpg" class="img-responsive">
+                </li>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no <b>Google lens</b>:
+                    <span></span>
+                </h5>
+
+                <h5 class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    Resultado no<b>Mobilenet</b>:
+                    <span></span>
+                </h5>
+
+                <div class="mini_resultado10" class="col-lg-6 col-md-6 col-sm-6 xs-12">
+                    <h4>Resultado:</h4>
+                    <hr>
+                    <h4 id="Resultado10"></h4>
+                </div>
+            </div>
+            <br>
+        </ol>
+        <h1>AVISO IMPOTANTE: NÃO CONSIGUI INSTALAR O GOOGLE LENS</h1>
+        
+        <script src="main.js"></script>
+</body>
+</html>
